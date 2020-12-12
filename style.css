@@ -1,6 +1,6 @@
 /**DOCUMENT CSS */
-*,*:after,*:before {
- margin: 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
@@ -20,6 +20,39 @@ ul li {
     position: relative;
    z-index: 2;
 }
+#check {
+    display: none;
+}
+.header .nav-header-site  
+{
+    transition: all 0.3s linear;
+}
+.header .btn_on ,.header .nav-header-site .btn_off {
+    opacity: 0;
+    position: absolute;
+    color: black;
+  font-size: 1.3em;
+  transition: all 0.3s linear;
+}
+.header .btn_on  , .header .nav-header-site .btn_off  { 
+    cursor: pointer;
+    
+}
+.header .btn_on {
+    left: 30px;
+    top: 15px;
+}
+#check:checked ~ .btn_on {
+  opacity: 0;
+}
+#check:checked ~ .btn_off {
+  opacity: 1;
+}
+#check:checked ~  .nav-header-site {
+  opacity: 1;
+     left: 0;
+}
+
 .background-header {
     background-image: url(img/WOODLOT-PRODUCTS-6_1_2048x2048.jpg);
     background-repeat: no-repeat;
@@ -63,7 +96,7 @@ ul li {
 .logo-header {
     display: flex;
     padding: 10px 10px;
-    min-width: 200px;
+    
 }
 .nav-header-site ul{
    
@@ -90,11 +123,7 @@ ul li {
 .search-acoount ul li a {
     font-size: 15px;
 }
-.svg-icon {
-    width: 18px ;
-    height: 18px;
-    vertical-align: middle;
-}
+
 .content-header {
     position: absolute;
     top: 400px;
@@ -414,3 +443,101 @@ li {
 .footer a , p {
     color: #535252 ; 
 } 
+/*responsive*/
+@media only screen and (max-width:760px){
+    ::-webkit-scrollbar {
+  		width: 0px;
+	}
+    .annecment {
+        padding: 7px 0 ;
+    }
+    .annecment p {
+        font-size: 11px;
+        
+    }
+    .site-header{
+        top: 27px;
+    }
+    .nav-header-site {
+        
+    }
+    .site-header {
+        padding: 0 ;
+        
+    }
+    .logo-header {
+        position: relative;
+        top: 3px ;
+        left: calc(50vw - 55px);
+        padding: 0;
+    }
+    .logo-header img {
+        max-width: 90%;
+    }
+    .search-acoount ul li  {
+        padding: 0 15px;
+        line-height: 50px;
+    }
+    .search-acoount ul li a {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .container {
+        padding-right: 0;
+    }
+    .header .btn_on ,.header .nav-header-site .btn_off {
+        opacity: 1;
+    }
+    .header .nav-header-site {
+        position: absolute;
+        top: 0px;
+        
+        width: 230px;
+        left: -250px;
+        background: #ffffff;
+        display: block;
+        padding: 15px;
+        z-index: 999;
+        height: 500px;
+        
+    }
+    .nav-header-site .fx {
+        display: block;
+        
+        width: 100%;
+    }
+    .header .nav-header-site ul   {
+        
+        width: 100%;
+        margin-top: 35px;
+        
+        
+    }
+    .header .nav-header-site ul li {
+        position: relative;
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #c6c5c5 ;
+    }
+    .header .nav-header-site ul li a {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        color: #535252;
+         
+    }
+    
+    
+}
+@media only screen and (max-width:630px){
+    .search-acoount #respo {
+        display: none;
+    }
+    .row {
+        flex-wrap: nowrap;
+    }
+    .container {
+        padding: 0  ;
+    }
+
+}
