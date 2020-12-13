@@ -58,8 +58,10 @@ ul li {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    background-origin: padding-box;
     width: 100%;
     height: 950px;
+    position: relative;
     
 }
 .annecment {
@@ -170,7 +172,8 @@ ul li {
     margin: 0 auto;
     text-align: center; 
     position: relative;
-    z-index: 1
+    z-index: 1;
+    max-width: 440px;;
 }
 .content-child h1 {
     margin-bottom: 20px;
@@ -225,6 +228,8 @@ ul li {
     background-position: center;
     background-size:cover;
     height: 700px ;
+    width: 100%;
+    position: relative;
     
     
     
@@ -276,7 +281,7 @@ ul li {
     margin: 11px;
     font-weight: 400;
     
-    width: calc(40.95% - 15px);
+    width: calc(40.95% - 17px);
     
     display: inline-block;
 }
@@ -288,7 +293,7 @@ ul li {
     font-size: 20px ;
     opacity: 0;
     transition: all 1s ease ;
-    z-index: 1;
+    z-index: 2;
 }
 
 .home-right {
@@ -314,9 +319,12 @@ ul li {
     transform: translateX(-50%);
     font-size: 20px;
     opacity: 0;
-    transition: all 1s ease ;
-    color: #fff;
-    z-index: 1;
+    transition: all 0.5s ease ;
+    color: #ffffff;
+    z-index: 2;
+}
+.text-bottom p {
+    color: #ffffff;
 }
 .shake {
     position: absolute;
@@ -326,12 +334,13 @@ ul li {
     left: 0;
     right: 0;
     background:#000000;
-    z-index: 0;
+    z-index: 1;
     opacity: 0;
     transition: all 0.5s ease ;
 }
 .left:hover .text-bottom {
     opacity: 1;
+
 }
 .left:hover .text-top {
     opacity: 1;
@@ -341,6 +350,7 @@ ul li {
 }
 .rigth:hover .text-bottom {
     opacity: 1;
+    
 }
 .rigth:hover .text-top {
     opacity: 1;
@@ -365,12 +375,12 @@ ul li {
     bottom: 0;
     z-index: 0;
     width: calc(100% - 30px);
-    ;margin-left: -15px;
+    margin-left: 18px;
 }
 .full-bg img {
     overflow:hidden;
-    max-width: 110%;
-    width: 110%;
+    max-width: 130%;
+    width: 130%;
     z-index: 0;
 }
 /*-----------*/
@@ -475,7 +485,7 @@ li {
         max-width: 90%;
     }
     .search-acoount ul li  {
-        padding: 0 15px;
+        padding: 0 0;
         line-height: 50px;
     }
     .search-acoount ul li a {
@@ -526,6 +536,87 @@ li {
         color: #535252;
          
     }
+    .background-header {
+        background-position: top right 22%;
+        height: 550px;
+    }
+    .content-header {
+        text-align: center;
+        top: 150px ;
+        left: auto;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .content-header-child {
+        
+      text-align: center;
+      margin: 0 auto;
+    }
+    .content-header-child h1 {
+        font-size: 30px;
+        line-height: 20px;
+    }
+    .content-header-child p {
+        font-size: 12px ;
+        line-height: 80px ;
+    }
+    .content-header-child a {
+        padding: 12px 18px;;
+    }
+    .content-child {
+        max-width: 270px ;
+        padding-top: 50px;;
+    }
+    .content-child p {
+          font-size: 15px;;
+    }
+    .gift-backg {
+        height: 500px;;
+    }
+    .content-gift{
+        max-width: 60.66%;
+        margin: 0 auto;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        width: 100%;
+    }
+    .content-gift h3 {
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+    .content-gift  a {
+        padding: 10px 15px ;
+        margin-top: 250px;
+    }
+    .home-left {
+        width: calc(100% - 22px );
+    }
+    .home-right {
+        width: calc(100% - 22px);
+    }
+    .emptiness {
+        height: 0;
+
+    }
+    .full-bg {
+        position: relative;
+        top: 0;
+        margin-top: 0;
+        bottom: inherit;
+        margin-left: -18px;   
+        width: 130%;
+    }
+    .full-bg img {
+        display: block;
+    }
+    .feature-row {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
     
     
 }
@@ -539,5 +630,6 @@ li {
     .container {
         padding: 0  ;
     }
+    
 
 }
