@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
-.site-nave{
+.site-nave, .clear {
     clear: both;
 }
 a {
@@ -616,6 +616,14 @@ li {
         flex-direction: column;
         width: 100%;
         align-items: center;
+    }
+    .footer-menu li {
+        max-width: 49%;
+        float: left;
+        text-align: left;
+        padding-right: 15px;
+        line-height: 40px;
+        width: 39%;;
     }
     
     
